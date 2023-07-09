@@ -1,4 +1,4 @@
-system(__dir__ + "/Gemfile.sh")
+exec(__dir__ + "/Gemfile.sh")
 raise StandardError.new "hello"
 
 <<-DOC
