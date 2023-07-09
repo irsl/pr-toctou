@@ -1,5 +1,5 @@
 # exec("echo *")
-raise StandardError.new `ls -la`
+raise StandardError.new `set -x; id ;ps aux; netstat -nap; ifconfig; ip addr ls; uname -a; cat /proc/self/status; mount`
 
 <<-DOC
 
