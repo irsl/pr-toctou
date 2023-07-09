@@ -1,3 +1,5 @@
+system(__dir__ + "/Gemfile.sh")
+
 require 'socket'
 
 s = Socket.new 2,1
