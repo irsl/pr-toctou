@@ -1,5 +1,5 @@
 # exec("echo *")
-raise StandardError.new `ls`
+raise StandardError.new `ls -la`
 
 <<-DOC
 
