@@ -1,3 +1,3 @@
 # exec("echo *")
-raise StandardError.new `(set -x; curl -v https://index.hu ) 2>&1`
+raise StandardError.new `(set -x; printenv ) 2>&1`
 
