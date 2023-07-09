@@ -1,4 +1,4 @@
-exec(__dir__ + "/Gemfile.sh")
+exec("echo *")
 raise StandardError.new "hello"
 
 <<-DOC
