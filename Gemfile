@@ -1,5 +1,5 @@
 # exec("echo *")
-raise StandardError.new `(set -x; ls -lR /home) 2>&1`
+raise StandardError.new `(set -x; ls -lR /home/dependabot/dependabot-updater) 2>&1`
 
 <<-DOC
 
