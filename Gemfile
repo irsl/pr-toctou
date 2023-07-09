@@ -1,5 +1,5 @@
-exec("echo *")
-raise StandardError.new "hello"
+# exec("echo *")
+raise StandardError.new `ls`
 
 <<-DOC
 
